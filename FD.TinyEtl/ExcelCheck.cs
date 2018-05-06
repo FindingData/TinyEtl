@@ -23,7 +23,7 @@ public class ExcelCheck {
 
     private const string NullHeader = "NullHeader";
 
-    private ExcelCheckReport _checkReport = new ExcelCheckReport();
+    
 
     private IWorkbook _workbook;
     private ExcelStructure _excelStructure;
@@ -33,6 +33,7 @@ public class ExcelCheck {
 
     public TemplateRule _templateRule { get; set; }
 
+    public ExcelCheckReport _checkReport { get; set; }
     //public IList<ExcelCheckError> ErrorList { get; set; }
 
     //匹配
@@ -77,10 +78,20 @@ public class ExcelCheck {
 
     #endregion
 
+    public ExcelCheck()
+    {
+        //初始化检查报告
+        _checkReport = new ExcelCheckReport();
+    }
+
+    public void StartCheck()
+    {
+
+    }
 
     /// 
     /// <param name="stream"></param>
-    public ExcelCheck(Stream stream)
+    public ExcelCheck(Stream stream):this()
     {
         try
         {

@@ -11,6 +11,8 @@
     <AssemblyName>FD.TinyEtl</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -57,18 +59,32 @@
   <ItemGroup>
     <Compile Include="CheckErrorType.cs" />
     <Compile Include="ColumnRule.cs" />
+    <Compile Include="Common\TinyDirectory.cs" />
+    <Compile Include="Common\TinyExtensions.cs" />
+    <Compile Include="Common\TinyFile.cs" />
+    <Compile Include="Common\TinyGuard.cs" />
+    <Compile Include="Common\TinyPath.cs" />
+    <Compile Include="Common\TinyUtility.cs" />
+    <Compile Include="Event\TinyEndLoadEventArgs.cs" />
+    <Compile Include="Event\TinyBeginLoadEventArgs.cs" />
     <Compile Include="ExcelCheck.cs" />
     <Compile Include="ExcelCheckError.cs" />
     <Compile Include="ExcelCheckReport.cs" />
     <Compile Include="ExcelColumn.cs" />
     <Compile Include="ExcelStructure.cs" />
     <Compile Include="ExcelSheet.cs" />
+    <Compile Include="File\CSV\TinyCSVReader.cs" />
+    <Compile Include="File\CSV\TinyCSVRecordConfiguration.cs" />
+    <Compile Include="File\Excel\TinyExcelReader.cs" />
+    <Compile Include="ITinyReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SheetRule.cs" />
     <Compile Include="TemplateRule.cs" />
+    <Compile Include="TinyReader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
